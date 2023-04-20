@@ -1,15 +1,13 @@
 # CV_Maker
-CV maker application. anyone can make his curriculum vitae using this application.
+Business card maker application. anyone can make his responsive visiting card using this application. User also share his digital visiting card with anyone. 
 
 ## Application Features
-- CV Generator
-  - Make responsive CV.
-  - Make his Resume.
-  - Download Resume PDF & PNG File.
+- Visiting Card Generator
+  - Make responsive visiting card.
+  - Make his digital visiting card.
+  - Download visiting card with PDF & PNG File.
+  - Scan digital visiting card.
   - All features are free.
-  
-- Make Responsible Visiting Card
-
 
 Any one can use this application.
 
