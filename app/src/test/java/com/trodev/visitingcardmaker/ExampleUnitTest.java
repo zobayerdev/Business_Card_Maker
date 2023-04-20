@@ -1,4 +1,4 @@
-package com.trodev.cvmaker;
+package com.trodev.visitingcardmaker;
 
 import org.junit.Test;
 

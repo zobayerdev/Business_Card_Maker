@@ -1,4 +1,4 @@
-package com.trodev.cvmaker;
+package com.trodev.visitingcardmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
 

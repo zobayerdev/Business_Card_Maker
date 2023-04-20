@@ -1,7 +1,6 @@
-package com.trodev.cvmaker;
+package com.trodev.visitingcardmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity {
