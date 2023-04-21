@@ -7,4 +7,23 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Trodev application color and bottom navigation color also-->
+    <color name="purple_201">#FFBB86FC</color>
+    <color name="purple_501">#000000</color>
+    <color name="purple_701">#000000</color>
+    <color name="teal_202">#03A9F4</color>
+    <color name="teal_701">#FF018786</color>
+
+    <!--Convertix color code and bottom navigation color also-->
+    <color name="purple_202">#FFBB86FC</color>
+    <color name="purple_502">#CECECE</color>
+    <color name="purple_702">#000000</color>
+    <color name="teal_203">#000000</color>
+    <color name="teal_300">#F44336</color>
+    <color name="teal_702">#FF018786</color>
+
+
+    <color name="yellow">#feb209</color>
+
 </resources>
