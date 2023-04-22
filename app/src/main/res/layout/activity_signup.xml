@@ -18,12 +18,12 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="480dp"
+            android:layout_height="640dp"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="444dp"
+                android:layout_height="624dp"
                 android:background="@drawable/white_cueve_bg" />
 
             <LinearLayout
@@ -36,7 +36,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="57.7dp"
+                    android:layout_marginTop="37.7dp"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="SIGN IN"
                     android:textColor="#030303"
@@ -45,18 +45,48 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="35dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Email or Username"
+                    android:text="Your Name*"
                     android:textColor="#030303"
                     android:textSize="13.3sp" />
 
                 <EditText
+                    android:id="@+id/nameET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="15dp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6.3dp"
+                    android:layout_marginRight="44.3dp"
+                    android:background="#d5d5d5" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Your Phone Number*"
+                    android:textColor="#030303"
+                    android:textSize="13.3sp" />
+
+                <EditText
+                    android:id="@+id/mobileET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textCursorDrawable="@drawable/grey_cursor_color"
                     android:textSize="15sp" />
@@ -71,13 +101,87 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30.3dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Your Email*"
+                    android:textColor="#030303"
+                    android:textSize="13.3sp" />
+
+                <EditText
+                    android:id="@+id/emailET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/grey_cursor_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6.3dp"
+                    android:layout_marginRight="44.3dp"
+                    android:background="#d5d5d5" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Your Gender*"
+                    android:textColor="#030303"
+                    android:textSize="13.3sp" />
+
+
+                <RadioGroup
+                    android:id="@+id/genderRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/femaleRb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15sp"
+                        tools:ignore="InvalidId" />
+
+                    <RadioButton
+                        android:id="@+id/maleRb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6.3dp"
+                    android:layout_marginRight="44.3dp"
+                    android:background="#d5d5d5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Password"
+                    android:text="Password*"
                     android:textColor="#030303"
                     android:textSize="13.3sp" />
 
                 <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                    android:id="@+id/passET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="11.7dp"
@@ -141,11 +245,11 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
                         android:layout_marginLeft="29dp"
                         android:layout_marginTop="53dp"
-                        android:src="@drawable/yellow_twitter" />
+                        android:src="@drawable/instagram" />
 
                 </LinearLayout>
 
@@ -157,9 +261,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/nextIv"
-                        android:layout_width="18.7dp"
-                        android:layout_height="15.3dp"
+                        android:id="@+id/signupIv"
+                        android:layout_width="19.7dp"
+                        android:layout_height="16.3dp"
                         android:src="@drawable/black_arrow" />
 
 
@@ -194,6 +298,7 @@
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/backTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
@@ -207,5 +312,18 @@
 
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:theme="@style/ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:progressBackgroundTint="#feb209"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>

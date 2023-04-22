@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/nav_user"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification" />
+
+    <item
+        android:id="@+id/nav_developer"
+        android:icon="@drawable/ic_developer"
+        android:title="Developer" />
+
+    <item
+        android:id="@+id/nav_tube"
+        android:icon="@drawable/nav_youtube"
+        android:title="Trodev Tube" />
+
+    <item
+        android:id="@+id/nav_policy"
+        android:icon="@drawable/nav_privacy"
+        android:title="Privacy Policy" />
+
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share" />
+
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/ic_rate"
+        android:title="Rate us" />
+
+    <item
+        android:id="@+id/nav_apps"
+        android:icon="@drawable/ic_apps"
+        android:title="Our Apps" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Log out" />
+
+</menu>
