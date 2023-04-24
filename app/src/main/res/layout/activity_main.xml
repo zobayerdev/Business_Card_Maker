@@ -67,8 +67,8 @@
                             android:layout_height="2dp"
                             android:background="@color/black" />
 
-
                         <TextView
+                            android:id="@+id/digitalTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -86,26 +86,8 @@
                             android:layout_height="2dp"
                             android:background="@color/black" />
 
-
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="8dp"
-                            android:layout_marginTop="@dimen/text_margin"
-                            android:fontFamily="@font/sf_ns_text"
-                            android:padding="2dp"
-                            android:text="Curriculum vitae Maker"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/black" />
-
-                        <TextView
+                            android:id="@+id/portfolioTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -118,23 +100,24 @@
                             android:textSize="@dimen/text_size1"
                             android:textStyle="bold" />
 
-                        <!--                        <View
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="2dp"
-                                                    android:background="@color/black" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/black" />
 
-                                                <TextView
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_gravity="center"
-                                                    android:layout_margin="8dp"
-                                                    android:layout_marginTop="@dimen/text_margin"
-                                                    android:fontFamily="@font/sf_ns_text"
-                                                    android:padding="2dp"
-                                                    android:text="UI/UX Design"
-                                                    android:textColor="@color/black"
-                                                    android:textSize="@dimen/text_size1"
-                                                    android:textStyle="bold" />-->
+                        <TextView
+                            android:id="@+id/cvTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:layout_marginTop="@dimen/text_margin"
+                            android:fontFamily="@font/sf_ns_text"
+                            android:padding="2dp"
+                            android:text="Curriculum vitae Maker"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size1"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -143,7 +126,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

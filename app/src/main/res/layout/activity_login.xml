@@ -137,7 +137,6 @@
                     android:layout_marginTop="30dp"
                     android:src="@drawable/yellow_linkedin" />
 
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -164,7 +163,6 @@
                         android:layout_width="19.7dp"
                         android:layout_height="16.3dp"
                         android:src="@drawable/black_arrow" />
-
 
                 </LinearLayout>
 

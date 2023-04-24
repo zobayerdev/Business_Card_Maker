@@ -52,13 +52,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
-
-    private TextView bvcmTv ;
+    private TextView bvcmTv, portfolioTv, digitalTv, cvTv;
     private static final String TAG = "SAVE_BITMAP";
 
     @SuppressLint("MissingInflatedId")
@@ -67,30 +65,58 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // actionbar title setting
+        getSupportActionBar().setTitle("Dashboard");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         bvcmTv = findViewById(R.id.bvcmTv);
+        portfolioTv = findViewById(R.id.portfolioTv);
+        digitalTv = findViewById(R.id.digitalTv);
+        cvTv = findViewById(R.id.cvTv);
 
         bvcmTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, MakeVisitingCardActivity.class));
+                Toast.makeText(MainActivity.this, "Business Visiting Card Maker", Toast.LENGTH_SHORT).show();
             }
         });
 
+        portfolioTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DigitalVisitingCardActivity.class));
+                Toast.makeText(MainActivity.this, "Portfolio QR Maker", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        getSupportActionBar().setTitle("Dashboard");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        digitalTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DigitalVisitingCardActivity.class));
+                Toast.makeText(MainActivity.this, "Digital Visiting Card Maker", Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        cvTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Coming soon....!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // init all id from xml
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigation_view);
 
-        // #######################
+        // #################################################################
         // Drawer Layout implement
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.start, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         // #################################################################
-        // eikhane eituku hocche amader navigation layout er kaj korar jonno.
+        //  navigation menu working directory
         navigationView.setNavigationItemSelectedListener(this::onOptionsItemSelected);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 

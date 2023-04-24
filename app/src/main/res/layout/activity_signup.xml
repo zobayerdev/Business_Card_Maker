@@ -69,7 +69,6 @@
                     android:layout_marginRight="44.3dp"
                     android:background="#d5d5d5" />
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -125,7 +124,6 @@
                     android:layout_marginRight="44.3dp"
                     android:background="#d5d5d5" />
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,15 +138,14 @@
                     android:id="@+id/genderRG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/femaleRb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Female"
                         android:fontFamily="@font/poppins_semibold"
+                        android:text="Female"
                         android:textSize="15sp"
                         tools:ignore="InvalidId" />
 
@@ -156,11 +153,10 @@
                         android:id="@+id/maleRb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Male"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:textSize="15sp"
                         android:layout_marginLeft="20dp"
-                        />
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Male"
+                        android:textSize="15sp" />
 
                 </RadioGroup>
 
@@ -310,20 +306,18 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
-        android:theme="@style/ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:elevation="10dp"
         android:progressBackgroundTint="#feb209"
-        android:visibility="gone"
-        />
+        android:theme="@style/ProgressBar"
+        android:visibility="gone" />
 
 </RelativeLayout>
