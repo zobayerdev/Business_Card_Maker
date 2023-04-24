@@ -3,8 +3,10 @@ package com.trodev.visitingcardmaker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -18,6 +20,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ContentValues;
 import android.graphics.Bitmap;
@@ -42,6 +45,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -54,26 +58,24 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private long pressedTime;
 
-    private LinearLayout infoLl;
-    private Button saveBtn;
+    private TextView bvcmTv ;
     private static final String TAG = "SAVE_BITMAP";
 
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        infoLl = findViewById(R.id.infoLl);
-        saveBtn = findViewById(R.id.saveBtn);
+        bvcmTv = findViewById(R.id.bvcmTv);
 
-        saveBtn.setOnClickListener(new View.OnClickListener() {
+        bvcmTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap bitmap = getBitmapFromUiView(infoLl);
-                saveBitmapImage(bitmap);
+                startActivity(new Intent(MainActivity.this, MakeVisitingCardActivity.class));
             }
         });
+
 
         getSupportActionBar().setTitle("Dashboard");
         getSupportActionBar().setDisplayShowHomeEnabled(true);

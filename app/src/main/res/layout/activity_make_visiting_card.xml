@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MakeVisitingCardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="390dp"
+                android:layout_height="220dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                tools:ignore="InOrMmUsage">
+
+
+                <LinearLayout
+                    android:id="@+id/infoLl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Md. Zobayer Hasan Nayem"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Founder/CEO"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!--Address is here-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="🏠 Jolpai Restaurant, Mogbazar, \n      Dhaka-1210"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                    <!--G-mail Text-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="📧 user@gmail.com"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                    <!--Telephone-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="📞 +8801615257555"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+
+                    <!--Website-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="🌐 www.website.com"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="save"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="390dp"
+                android:layout_height="220dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                tools:ignore="InOrMmUsage">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Md. Zobayer Hasan Nayem"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="210dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Founder/CEO"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!--Address is here-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="🏠 Jolpai Restaurant, Mogbazar, \n      Dhaka-1210"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                    <!--G-mail Text-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="📧 user@gmail.com"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                    <!--Telephone-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="📞 +8801615257555"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+
+                    <!--Website-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="215dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="🌐 www.website.com"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="save"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>
