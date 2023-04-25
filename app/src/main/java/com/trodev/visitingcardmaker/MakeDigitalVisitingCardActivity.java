@@ -18,10 +18,12 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
-
     private static final int PICK_IMAGE_REQUEST = 1;
     private ImageView imageView;
-    private TextInputEditText nameET, companyET, designationET, phoneET, emailET, homeET, officeET, bioET, facebookET, instagramET, linkedinET, twitterET, githubET;
+    private TextInputEditText nameET, companyET, designationET, phoneET, emailET, homeET,
+                                              officeET, bioET, facebookET, instagramET, linkedinET, twitterET, githubET;
+
+    private String name, company, designation, phone, email, home, office, bio, facebook, instagram, linkedin, twitter, github;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -78,7 +80,6 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
             }
         }
     }
-
     private Bitmap compressImage(Bitmap originalBitmap) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         originalBitmap.compress(Bitmap.CompressFormat.JPEG, 50, outputStream);
