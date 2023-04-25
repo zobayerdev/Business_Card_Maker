@@ -44,5 +44,8 @@ dependencies {
     // hide password  text
     implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
 
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 }

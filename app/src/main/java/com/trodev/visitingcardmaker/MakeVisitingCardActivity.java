@@ -28,10 +28,10 @@ import com.google.android.material.button.MaterialButton;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 
 public class MakeVisitingCardActivity extends AppCompatActivity {
-
     private LinearLayout infoLl;
     private Button saveBtn;
 
@@ -48,7 +48,12 @@ public class MakeVisitingCardActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bitmap bitmap = getBitmapFromUiView(infoLl);
+                Bitmap bitmap = null;
+                try {
+                    bitmap = saveBitmapAsBusinessCard(infoLl);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 saveBitmapImage(bitmap);
             }
         });
@@ -73,6 +78,36 @@ public class MakeVisitingCardActivity extends AppCompatActivity {
 
         //return the bitmap
         return returnedBitmap;
+    }
+
+    private Bitmap saveBitmapAsBusinessCard(View view) throws IOException {
+        // Define the dimensions of the business card in pixels (assuming 300 DPI)
+        int widthPx = (int) (3.5 * 300);
+        int heightPx = (int) (2 * 300);
+
+        // Create a scaled Bitmap with the same aspect ratio as the original view
+        Bitmap originalBitmap = getBitmapFromUiView(view);
+        float scaleX = (float) widthPx / originalBitmap.getWidth();
+        float scaleY = (float) heightPx / originalBitmap.getHeight();
+        float scale = Math.min(scaleX, scaleY);
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap,
+                (int) (originalBitmap.getWidth() * scale),
+                (int) (originalBitmap.getHeight() * scale), true);
+
+        // Create a new Bitmap with the exact business card dimensions (cropping if necessary)
+        Bitmap cardBitmap = Bitmap.createBitmap(widthPx, heightPx, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(cardBitmap);
+        canvas.drawColor(Color.WHITE);
+        int left = (cardBitmap.getWidth() - scaledBitmap.getWidth()) / 2;
+        int top = (cardBitmap.getHeight() - scaledBitmap.getHeight()) / 2;
+        canvas.drawBitmap(scaledBitmap, left, top, null);
+
+        // Save the Bitmap as a PNG file
+/*        FileOutputStream fos = new FileOutputStream(file);
+        cardBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        fos.close();*/
+
+        return cardBitmap ;
     }
 
     /// @param folderName can be your app's name
@@ -133,5 +168,4 @@ public class MakeVisitingCardActivity extends AppCompatActivity {
             }
         }
     }
-
 }
