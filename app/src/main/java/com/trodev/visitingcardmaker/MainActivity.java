@@ -3,7 +3,6 @@ package com.trodev.visitingcardmaker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
@@ -11,7 +10,6 @@ import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,44 +17,43 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ContentValues;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.button.MaterialButton;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.trodev.visitingcardmaker.fragment.HomeFragment;
+import com.trodev.visitingcardmaker.fragment.ImageFragment;
+import com.trodev.visitingcardmaker.fragment.ScanFragment;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
+    private BottomNavigationView bottomNavigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
-    private TextView bvcmTv, portfolioTv, digitalTv, cvTv;
+
     private static final String TAG = "SAVE_BITMAP";
 
     @SuppressLint("MissingInflatedId")
@@ -65,45 +62,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // actionbar title setting
+    /*    // actionbar title setting
         getSupportActionBar().setTitle("Dashboard");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);*/
 
-        bvcmTv = findViewById(R.id.bvcmTv);
-        portfolioTv = findViewById(R.id.portfolioTv);
-        digitalTv = findViewById(R.id.digitalTv);
-        cvTv = findViewById(R.id.cvTv);
-
-        bvcmTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MakeVisitingCardActivity.class));
-                Toast.makeText(MainActivity.this, "Business Visiting Card Maker", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        portfolioTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DigitalVisitingCardActivity.class));
-                Toast.makeText(MainActivity.this, "Portfolio QR Maker", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        digitalTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MakeDigitalVisitingCardActivity.class));
-                Toast.makeText(MainActivity.this, "Digital Visiting Card Maker", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        cvTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Coming soon....!", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         // init all id from xml
         drawerLayout = findViewById(R.id.drawerlayout);
@@ -120,8 +82,53 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(this::onOptionsItemSelected);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        loadHomeFragment();
+
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                int itemId = item.getItemId();
+                if (itemId == R.id.bottom_menu_card) {
+                    loadCardFragment();
+                } else if (itemId == R.id.bottom_menu_scan) {
+                    loadScanFragment();
+                } else if (itemId == R.id.bottom_menu_home) {
+                    loadHomeFragment();
+                } else {
+                    Toast.makeText(MainActivity.this, "Invalid Click", Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            }
+        });
+
     }
 
+    private void loadCardFragment() {
+        setTitle("Responsive Cards");
+        ImageFragment imageListFragment = new ImageFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, imageListFragment, "ImageListFragment");
+        fragmentTransaction.commit();
+    }
+
+    private void loadScanFragment() {
+        setTitle("Scan Cards");
+        ScanFragment scanFragment = new ScanFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, scanFragment, "PdfListFragment");
+        fragmentTransaction.commit();
+    }
+
+    private void loadHomeFragment() {
+        setTitle("Dashboard");
+        HomeFragment homeFragment = new HomeFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, homeFragment, "HomeListFragment");
+        fragmentTransaction.commit();
+    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -174,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Business Visiting Card Maker");
                     String shareMessage = "\nBusiness Visiting Card Maker App Download now\n\n";
-                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id= " + BuildConfig.APPLICATION_ID + "\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
                     Toast.makeText(this, "Share Apps", Toast.LENGTH_SHORT).show();

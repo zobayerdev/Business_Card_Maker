@@ -7,127 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:orientation="vertical">
 
-        <LinearLayout
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomNavigationView" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#feb209">
+            android:layout_alignParentBottom="true"
+            app:itemTextAppearance="@style/RobotoTextViewStyle"
+            app:menu="@menu/menu_bottom_nav" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/kalpurush"
-                    android:text="Choose Item &amp; Make yours"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/title_size"
-                    android:textStyle="bold" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/bvcmTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="8dp"
-                            android:layout_marginTop="@dimen/text_margin"
-                            android:fontFamily="@font/sf_ns_text"
-                            android:padding="2dp"
-                            android:text="Business Visiting Card Maker"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/black" />
-
-                        <TextView
-                            android:id="@+id/digitalTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="8dp"
-                            android:layout_marginTop="@dimen/text_margin"
-                            android:fontFamily="@font/sf_ns_text"
-                            android:padding="2dp"
-                            android:text="Digital Business Visiting Card Maker"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/black" />
-
-                        <TextView
-                            android:id="@+id/portfolioTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="8dp"
-                            android:layout_marginTop="@dimen/text_margin"
-                            android:fontFamily="@font/sf_ns_text"
-                            android:padding="2dp"
-                            android:text="Portfolio QR Maker"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/black" />
-
-                        <TextView
-                            android:id="@+id/cvTv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="8dp"
-                            android:layout_marginTop="@dimen/text_margin"
-                            android:fontFamily="@font/sf_ns_text"
-                            android:padding="2dp"
-                            android:text="Curriculum vitae Maker"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
@@ -136,8 +35,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_menu"
-        app:itemTextAppearance="@style/RobotoTextViewStyle"
+        app:itemTextAppearance="@style/PoppinsTextViewStyle"
         app:menu="@menu/navigation_menu" />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

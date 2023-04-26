@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_menu_home"
+        android:icon="@drawable/nav_home"
+        android:title="Home"
+        android:fontFamily="@font/sf_ns_text"
+        />
+    <item
+        android:id="@+id/bottom_menu_scan"
+        android:title="Scan Card"
+        android:icon="@drawable/ic_scan"
+        android:fontFamily="@font/sf_ns_text"
+        />
+    <item
+        android:id="@+id/bottom_menu_card"
+        android:icon="@drawable/ic_image"
+        android:title="Responsive Cards"
+        android:fontFamily="@font/sf_ns_text"
+        />
+
+</menu>
