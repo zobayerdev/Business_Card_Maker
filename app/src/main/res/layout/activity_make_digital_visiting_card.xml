@@ -54,13 +54,12 @@
                 android:id="@+id/nameET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="5dp"
                 android:fontFamily="@font/trebuc"
                 android:hint="Enter your name*"
-                android:drawableStart="@drawable/nav_user"
-                android:drawablePadding="5dp"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <!--Enter your Company Name-->
         <com.google.android.material.textfield.TextInputLayout
@@ -73,6 +72,8 @@
                 android:id="@+id/companyET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_company"
+                android:drawablePadding="5dp"
                 android:fontFamily="@font/trebuc"
                 android:hint="Enter your company*"
                 android:inputType="text" />
@@ -89,6 +90,8 @@
                 android:id="@+id/designationET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_designation"
+                android:drawablePadding="5dp"
                 android:fontFamily="@font/trebuc"
                 android:hint="Enter your designation*"
                 android:inputType="text" />
@@ -105,6 +108,8 @@
                 android:id="@+id/phoneET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="5dp"
                 android:fontFamily="@font/trebuc"
                 android:hint="Enter your phone*"
                 android:inputType="text" />
@@ -121,6 +126,8 @@
                 android:id="@+id/gmailET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="5dp"
                 android:fontFamily="@font/trebuc"
                 android:hint="Enter your e-mail*"
                 android:inputType="textEmailAddress" />
@@ -255,17 +262,16 @@
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <!--details-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="👉  Input your other's social media link"
+            android:text="👉 Exceptional other's social media link"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -278,11 +284,86 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="GitHub username (exceptional)"
+                android:hint="GitHub username"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dribbleET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trebuc"
+                android:hint="Dribble username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pintarestET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trebuc"
+                android:hint="Pinterest username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/behanceET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trebuc"
+                android:hint="Behance username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fiverrET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trebuc"
+                android:hint="Fiverr username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/upworkET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trebuc"
+                android:hint="Upwork username"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Button all-->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadBtn"
             android:layout_width="match_parent"

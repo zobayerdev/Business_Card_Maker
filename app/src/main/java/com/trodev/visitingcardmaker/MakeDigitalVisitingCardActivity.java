@@ -26,9 +26,10 @@ import java.io.IOException;
 public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private ImageView imageView;
-    private TextInputEditText nameET, companyET, designationET, phoneET, gmailET, homeET, officeET, bioET, facebookET, instagramET, linkedinET, twitterET, githubET;
+    private TextInputEditText nameET, companyET, designationET, phoneET, gmailET, homeET, officeET, bioET, facebookET, instagramET, linkedinET, twitterET;
+    private TextInputEditText githubET, dribbleET, pintarestET, behanceET, fiverrET, upworkET;
     private MaterialButton uploadBtn;
-    private String name, company, designation, phone, email, home, office, bio, facebook, instagram, linkedin, twitter, github;
+    private String name, company, designation, phone, email, home, office, bio, facebook, instagram, linkedin, twitter, github, dribble, pinterest, behance, fiverr, upwork;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
@@ -55,7 +56,14 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         instagramET = findViewById(R.id.instagramET);
         linkedinET = findViewById(R.id.linkedinET);
         twitterET = findViewById(R.id.twitterET);
+
+        /*exceptional edit text user requirements*/
         githubET = findViewById(R.id.githubET);
+        dribbleET = findViewById(R.id.dribbleET);
+        pintarestET = findViewById(R.id.pintarestET);
+        behanceET = findViewById(R.id.behanceET);
+        fiverrET = findViewById(R.id.fiverrET);
+        upworkET = findViewById(R.id.upworkET);
 
         /*init button*/
         uploadBtn = findViewById(R.id.uploadBtn);
@@ -76,40 +84,7 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
 
     }
 
-    /*Image picker from gallery*/
-    private void openFileChooser() {
-        Intent intent = new Intent(Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
-
-    /*Image set on Bitmap and send it Bitmap media*/
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            Uri imageUri = data.getData();
-            try {
-
-                Bitmap selectedImage = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-                imageView.setImageBitmap(compressImage(selectedImage));
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /*compress image from any file*/
-    private Bitmap compressImage(Bitmap originalBitmap) {
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        originalBitmap.compress(Bitmap.CompressFormat.JPEG, 50, outputStream);
-        byte[] byteArray = outputStream.toByteArray();
-        return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-    }
-
-
+    /*Top menu bar initial code*/
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.digital_top_menubar, menu);
@@ -118,7 +93,6 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         int itemId = item.getItemId();
         if (itemId == R.id.uploadBtn) {
             sendData();
@@ -141,7 +115,15 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         instagram = instagramET.getText().toString().trim();
         linkedin = linkedinET.getText().toString().trim();
         twitter = twitterET.getText().toString().trim();
+
+        /*user requirements*/
         github = githubET.getText().toString().trim();
+        dribble = dribbleET.getText().toString().trim();
+        pinterest = pintarestET.getText().toString().trim();
+        behance = behanceET.getText().toString().trim();
+        fiverr = fiverrET.getText().toString().trim();
+        upwork = upworkET.getText().toString().trim();
+
 
         if (name.isEmpty()) {
             nameET.setError("Name is required");
@@ -194,10 +176,50 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
             intent.putExtra("instagram", instagram);
             intent.putExtra("linkedin", linkedin);
             intent.putExtra("twitter", twitter);
+
+            /*user requirements*/
             intent.putExtra("github", github);
+            intent.putExtra("dribble", dribble);
+            intent.putExtra("pinterest", pinterest);
+            intent.putExtra("behance", behance);
+            intent.putExtra("fiverr", fiverr);
+            intent.putExtra("upwork", upwork);
 
             startActivity(intent);
             Toast.makeText(this, "Generate File", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /*Image picker from gallery*/
+    private void openFileChooser() {
+        Intent intent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
+
+    /*Image set on Bitmap and send it Bitmap media*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri imageUri = data.getData();
+            try {
+
+                Bitmap selectedImage = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+                imageView.setImageBitmap(compressImage(selectedImage));
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /*compress image from any file*/
+    private Bitmap compressImage(Bitmap originalBitmap) {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        originalBitmap.compress(Bitmap.CompressFormat.JPEG, 50, outputStream);
+        byte[] byteArray = outputStream.toByteArray();
+        return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
     }
 }
