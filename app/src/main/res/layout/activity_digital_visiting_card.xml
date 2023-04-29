@@ -46,247 +46,105 @@
             android:id="@+id/nameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
             android:fontFamily="@font/poppins_semibold"
-            android:textColor="@color/black"
-            />
+            android:text="Name"
+            android:textColor="@color/black" />
 
-        <!--Enter your name-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Enter your name"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <!--Enter your Company Name-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/companyET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Enter your company"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your designation-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/designationET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Enter your designation"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your phone number-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phoneET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Enter your phone"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your gmail-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/gmailET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Enter your e-mail"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your Home Address-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/homeET"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:fontFamily="@font/trebuc"
-                android:gravity="top"
-                android:hint="🏠 Home address"
-                android:inputType="textMultiLine"
-                android:maxLines="10" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your office Address-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/officeET"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:fontFamily="@font/trebuc"
-                android:gravity="top"
-                android:hint="💼 Office address"
-                android:inputType="textMultiLine"
-                android:maxLines="10" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your bio-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/bioET"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:fontFamily="@font/trebuc"
-                android:gravity="top"
-                android:hint="Enter your short bio"
-                android:inputType="textMultiLine"
-                android:maxLines="10" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--details-->
         <TextView
+            android:id="@+id/companyTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="👉  Input your social media link"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:text="Company"
+            android:textColor="@color/black" />
 
-        <!--Enter your facebook-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/designationTv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/facebookET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Facebook username"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your instagram-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/instagramET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Instagram username"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your LinkedIn-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/linkedinET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="LinkedIn username"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--Enter your GitHub-->
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/twitterET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="Twitter username"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/githubET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/trebuc"
-                android:hint="GitHub username"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/uploadBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Upload"
             android:fontFamily="@font/poppins_semibold"
-            android:textAllCaps="false"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
-            />
+            android:text="Designation"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Phone number"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Email"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/homeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Home address"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/officeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Office address"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/bioTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Bio-data"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/facebookTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Facebook username"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/instagramTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Instagram username"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/linkedinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="linkedin username"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/twitterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Twitter username"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/githubTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Github username"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

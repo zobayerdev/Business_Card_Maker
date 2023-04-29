@@ -55,7 +55,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Enter your name"
+                android:hint="Enter your name*"
+                android:drawableStart="@drawable/nav_user"
+                android:drawablePadding="5dp"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Enter your company"
+                android:hint="Enter your company*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Enter your designation"
+                android:hint="Enter your designation*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Enter your phone"
+                android:hint="Enter your phone*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Enter your e-mail"
+                android:hint="Enter your e-mail*"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +139,7 @@
                 android:layout_height="100dp"
                 android:fontFamily="@font/trebuc"
                 android:gravity="top"
-                android:hint="🏠 Home address"
+                android:hint="🏠 Home address*"
                 android:inputType="textMultiLine"
                 android:maxLines="10" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -155,7 +157,7 @@
                 android:layout_height="100dp"
                 android:fontFamily="@font/trebuc"
                 android:gravity="top"
-                android:hint="💼 Office address"
+                android:hint="💼 Office or Institute address*"
                 android:inputType="textMultiLine"
                 android:maxLines="10" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -173,7 +175,7 @@
                 android:layout_height="150dp"
                 android:fontFamily="@font/trebuc"
                 android:gravity="top"
-                android:hint="Enter your short bio"
+                android:hint="Enter your short bio*"
                 android:inputType="textMultiLine"
                 android:maxLines="10" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -201,7 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Facebook username"
+                android:hint="Facebook username*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -217,7 +219,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Instagram username"
+                android:hint="Instagram username*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -233,7 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="LinkedIn username"
+                android:hint="LinkedIn username*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -249,23 +251,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="Twitter username"
+                android:hint="Twitter username*"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--details-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="👉  Input your other's social media link"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/githubET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/trebuc"
-                android:hint="GitHub username"
+                android:hint="GitHub username (exceptional)"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -274,12 +287,11 @@
             android:id="@+id/uploadBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Upload"
-            android:fontFamily="@font/poppins_semibold"
-            android:textAllCaps="false"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"
-            />
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Upload"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

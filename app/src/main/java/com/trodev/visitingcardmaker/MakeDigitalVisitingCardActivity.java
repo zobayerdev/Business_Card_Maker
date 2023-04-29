@@ -26,11 +26,8 @@ import java.io.IOException;
 public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private ImageView imageView;
-    private TextInputEditText nameET, companyET, designationET, phoneET, emailET, homeET,
-            officeET, bioET, facebookET, instagramET, linkedinET, twitterET, githubET;
-
+    private TextInputEditText nameET, companyET, designationET, phoneET, gmailET, homeET, officeET, bioET, facebookET, instagramET, linkedinET, twitterET, githubET;
     private MaterialButton uploadBtn;
-
     private String name, company, designation, phone, email, home, office, bio, facebook, instagram, linkedin, twitter, github;
 
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
@@ -50,7 +47,7 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         companyET = findViewById(R.id.companyET);
         designationET = findViewById(R.id.designationET);
         phoneET = findViewById(R.id.phoneET);
-        emailET = findViewById(R.id.emailET);
+        gmailET = findViewById(R.id.gmailET);
         homeET = findViewById(R.id.homeET);
         officeET = findViewById(R.id.officeET);
         bioET = findViewById(R.id.bioET);
@@ -79,7 +76,6 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
 
     }
 
-
     /*Image picker from gallery*/
     private void openFileChooser() {
         Intent intent = new Intent(Intent.ACTION_PICK,
@@ -95,8 +91,10 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri imageUri = data.getData();
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-                imageView.setImageBitmap(compressImage(bitmap));
+
+                Bitmap selectedImage = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+                imageView.setImageBitmap(compressImage(selectedImage));
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -124,18 +122,18 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         if (itemId == R.id.uploadBtn) {
             sendData();
-            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
 
+
     /*private String name, company, designation, phone, email, home, office, bio, facebook, instagram, linkedin, twitter, github;*/
     private void sendData() {
         name = nameET.getText().toString().trim();
-/*        company = companyET.getText().toString().trim();
+        company = companyET.getText().toString().trim();
         designation = designationET.getText().toString().trim();
         phone = phoneET.getText().toString().trim();
-        email = emailET.getText().toString().trim();
+        email = gmailET.getText().toString().trim();
         home = homeET.getText().toString().trim();
         office = officeET.getText().toString().trim();
         bio = bioET.getText().toString().trim();
@@ -143,12 +141,12 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
         instagram = instagramET.getText().toString().trim();
         linkedin = linkedinET.getText().toString().trim();
         twitter = twitterET.getText().toString().trim();
-        github = githubET.getText().toString().trim();*/
+        github = githubET.getText().toString().trim();
 
         if (name.isEmpty()) {
             nameET.setError("Name is required");
             nameET.requestFocus();
-        }/* else if (company.isEmpty()) {
+        } else if (company.isEmpty()) {
             companyET.setError("Company is required");
             companyET.requestFocus();
         } else if (designation.isEmpty()) {
@@ -158,13 +156,13 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
             phoneET.setError("Phone number is required");
             phoneET.requestFocus();
         } else if (email.isEmpty()) {
-            emailET.setError("Email is required");
-            emailET.requestFocus();
+            gmailET.setError("Email is required");
+            gmailET.requestFocus();
         } else if (home.isEmpty()) {
             homeET.setError("Home address is required");
             homeET.requestFocus();
         } else if (office.isEmpty()) {
-            officeET.setError("Office address is required");
+            officeET.setError("Office or Institute address is required");
             officeET.requestFocus();
         } else if (bio.isEmpty()) {
             bioET.setError("Short Bio-data is required");
@@ -179,31 +177,27 @@ public class MakeDigitalVisitingCardActivity extends AppCompatActivity {
             linkedinET.setError("LinkedIn username is required");
             linkedinET.requestFocus();
         } else if (twitter.isEmpty()) {
-            twitterET.setError("Twitter is required");
+            twitterET.setError("Twitter username is required");
             twitterET.requestFocus();
-        } else if (github.isEmpty()) {
-            githubET.setError("Github username is required");
-            githubET.requestFocus();
-        }*/
+        } else {
 
-        Intent intent = new Intent(MakeDigitalVisitingCardActivity.this, DigitalVisitingCardActivity.class);
-        intent.putExtra("name", name);
-/*        intent.putExtra("company", company);
-        intent.putExtra("designation", designation);
-        intent.putExtra("phone", phone);
-        intent.putExtra("email", email);
-        intent.putExtra("home", home);
-        intent.putExtra("office", office);
-        intent.putExtra("bio", bio);
-        intent.putExtra("facebook", facebook);
-        intent.putExtra("instagram", instagram);
-        intent.putExtra("linkedin", linkedin);
-        intent.putExtra("twitter", twitter);
-        intent.putExtra("github", github);*/
+            Intent intent = new Intent(MakeDigitalVisitingCardActivity.this, DigitalVisitingCardActivity.class);
+            intent.putExtra("name", name);
+            intent.putExtra("company", company);
+            intent.putExtra("designation", designation);
+            intent.putExtra("phone", phone);
+            intent.putExtra("email", email);
+            intent.putExtra("home", home);
+            intent.putExtra("office", office);
+            intent.putExtra("bio", bio);
+            intent.putExtra("facebook", facebook);
+            intent.putExtra("instagram", instagram);
+            intent.putExtra("linkedin", linkedin);
+            intent.putExtra("twitter", twitter);
+            intent.putExtra("github", github);
 
-        // intent.putExtra("avater", String.valueOf(imageView));
-
-        startActivity(intent);
+            startActivity(intent);
+            Toast.makeText(this, "Generate File", Toast.LENGTH_SHORT).show();
+        }
     }
-
 }
