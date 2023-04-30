@@ -4,4 +4,5 @@
     <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">You are not connected to the internet.\nMake sure your wifi is on or mobile data is on, Please off Airplane mode and try again.</string>
 </resources>

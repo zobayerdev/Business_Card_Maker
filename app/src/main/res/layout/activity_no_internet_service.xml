@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".NoInternetService">
+
+    <ListView
+        android:id="@+id/wifiList"
+        android:layout_width="match_parent"
+        android:layout_height="312dp"
+        android:layout_weight="0.97"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="100dp"
+        app:cardBackgroundColor="#FFC107"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/shapeDivider"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="90dp"
+                android:layout_toStartOf="@+id/birdIcon"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lineIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/birdIcon"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_2" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@+id/birdIcon"
+                android:src="@drawable/img_2" />
+
+
+            <ImageView
+                android:id="@+id/lineIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/shapeDivider"
+                android:layout_marginBottom="40dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img" />
+
+            <ImageView
+                android:id="@+id/birdIcon"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/shapeDivider"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="23dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bird" />
+
+            <ImageView
+                android:id="@+id/shapeDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/shape" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/shapeDivider"
+                android:background="#E9FFFFFF">
+
+                <TextView
+                    android:id="@+id/noInternetTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="No Internet Connection"
+                    android:textColor="#000000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/retryBtn"
+                    android:layout_below="@+id/noInternetTitle"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/title"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/retryBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/round_back_stroke"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="60dp"
+                    android:text="Retry"
+                    android:textAllCaps="false"
+                    android:textColor="#324460" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
