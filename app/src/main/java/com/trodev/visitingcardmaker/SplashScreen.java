@@ -30,8 +30,8 @@ public class SplashScreen extends AppCompatActivity {
 
                 // auto user login
                 FirebaseAuth auth = FirebaseAuth.getInstance();
-                
-                  if (auth.getCurrentUser() != null) {
+
+                if (auth.getCurrentUser() != null) {
                     // User is signed in (getCurrentUser() will be null if not signed in)
                     Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(intent);
