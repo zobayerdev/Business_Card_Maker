@@ -205,8 +205,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
                             <ImageView
                                 android:layout_width="20dp"
@@ -218,12 +218,19 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:layout_marginTop="2dp"
+                                android:layout_weight="1"
                                 android:autoLink="email"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text=" Email"
+                                android:text=" zobayer.dev@gmail.com"
                                 android:textColor="@color/black" />
 
+                            <ImageView
+                                android:id="@+id/editEmailIv"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="100dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/edit_email" />
 
                         </LinearLayout>
 

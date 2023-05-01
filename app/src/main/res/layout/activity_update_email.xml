@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateProfileActivity">
+    tools:context=".UpdateEmailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="5dp"
@@ -32,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Welcome!!\nUpdate your profile"
+                    android:text="Welcome!!\nYour old E-mail"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -43,13 +44,13 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/nameET"
+                        android:id="@+id/emailET"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/user"
+                        android:drawableStart="@drawable/ic_email"
                         android:drawablePadding="5dp"
                         android:fontFamily="@font/trebuc"
-                        android:hint="Enter your name"
+                        android:hint="Your current email"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,63 +62,85 @@
                     android:layout_marginTop="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/phoneET"
+                        android:id="@+id/passwordET"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_call"
+                        android:drawableStart="@drawable/ic_password"
                         android:drawablePadding="5dp"
                         android:fontFamily="@font/trebuc"
-                        android:hint="Enter your mobile"
+                        android:hint= "Your current password"
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Update your Gender*"
-                    android:textColor="#030303"
-                    android:textSize="13.3sp" />
-
-                <RadioGroup
-                    android:id="@+id/genderRG"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/femaleRb"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Female"
-                        android:textSize="15sp"
-                        tools:ignore="InvalidId" />
-
-                    <RadioButton
-                        android:id="@+id/maleRb"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Male"
-                        android:textSize="15sp" />
-
-                </RadioGroup>
-
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/uploadBtn"
+                    android:id="@+id/authBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Update Info"
+                    android:text="Authenticate user"
                     android:textAllCaps="false" />
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/greatingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="           Now!!\nUpdate your E-mail"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <!--Enter your name-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/newEmailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/trebuc"
+                android:hint="Enter your new email"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/validateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Change E-mail"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
         <ProgressBar
             android:id="@+id/progressBar"

@@ -19,8 +19,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateProfileActivity"
+            android:name=".UpdatePasswordActivity"
             android:exported="false" />
+        <activity
+            android:name=".UpdateEmailActivity"
+            android:exported="false"
+            android:parentActivityName=".ProfileActivity" />
         <activity
             android:name=".UploadImageActivity"
             android:exported="false"

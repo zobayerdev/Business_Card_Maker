@@ -10,24 +10,12 @@
         android:id="@+id/menu_refresh"
         />
 
-    <item android:title="Update Profile"
-        android:id="@+id/menu_update_profile"
-        />
-
     <item android:title="Update Email"
         android:id="@+id/menu_update_email"
-        />
-
-    <item android:title="Update Password"
-        android:id="@+id/menu_update_password"
-        />
-
-    <item android:title="Settings"
-        android:id="@+id/menu_setting"
-        />
-
-    <item android:title="Delete Profile"
-        android:id="@+id/menu_delete_profile"
+        android:icon="@drawable/edit"
+        android:alphabeticShortcut="r"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
         />
 
 </menu>

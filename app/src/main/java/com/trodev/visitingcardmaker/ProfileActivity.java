@@ -42,7 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
     private String name, phone, email, password, gender;
     private ImageView userIv;
     private FirebaseAuth authProfile;
-    private ImageView copyBtn;
+    private ImageView copyBtn, editEmailIv;
     private FirebaseUser firebaseUser;
 
     @SuppressLint("MissingInflatedId")
@@ -63,6 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
         userIv = findViewById(R.id.userIv);
         progressBar = findViewById(R.id.progressBar);
         copyBtn = findViewById(R.id.copyBtn);
+        editEmailIv = findViewById(R.id.editEmailIv);
 
         /*auth firebase*/
         authProfile = FirebaseAuth.getInstance();
@@ -84,6 +85,14 @@ public class ProfileActivity extends AppCompatActivity {
                 android.content.ClipData clip = android.content.ClipData.newPlainText("Text Label", passwordTv.getText().toString());
                 clipboard.setPrimaryClip(clip);
                 Toast.makeText(ProfileActivity.this, "Copied successful", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        editEmailIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, UpdateEmailActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -158,23 +167,10 @@ public class ProfileActivity extends AppCompatActivity {
             finish();
             overridePendingTransition(0, 0);
         }
-        if (id == R.id.menu_update_profile) {
-            startActivity(new Intent(ProfileActivity.this, UpdateProfileActivity.class));
-            Toast.makeText(this, "Update your profile", Toast.LENGTH_SHORT).show();
-        }
         if (id == R.id.menu_update_email) {
+            startActivity(new Intent(ProfileActivity.this, UpdateEmailActivity.class));
             Toast.makeText(this, "Update your email", Toast.LENGTH_SHORT).show();
         }
-        if (id == R.id.menu_update_password) {
-            Toast.makeText(this, "Update your password", Toast.LENGTH_SHORT).show();
-        }
-        if (id == R.id.menu_setting) {
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-        }
-        if (id == R.id.menu_delete_profile) {
-            Toast.makeText(this, "Delete your profile", Toast.LENGTH_SHORT).show();
-        }
-
         return super.onOptionsItemSelected(item);
     }
 }
