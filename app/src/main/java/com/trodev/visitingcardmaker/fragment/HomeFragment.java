@@ -30,9 +30,9 @@ public class HomeFragment extends Fragment {
        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         bvcmTv = view.findViewById(R.id.bvcmTv);
-        portfolioTv = view.findViewById(R.id.portfolioTv);
+     //   portfolioTv = view.findViewById(R.id.portfolioTv);
         digitalTv = view.findViewById(R.id.digitalTv);
-        cvTv = view.findViewById(R.id.cvTv);
+      //  cvTv = view.findViewById(R.id.cvTv);
 
         bvcmTv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,13 +42,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        portfolioTv.setOnClickListener(new View.OnClickListener() {
+/*        portfolioTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), DigitalVisitingCardActivity.class));
                 Toast.makeText(getActivity(), "Portfolio QR Maker", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         digitalTv.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -85,7 +85,7 @@
                             android:layout_height="2dp"
                             android:background="@color/black" />
 
-                        <TextView
+<!--                        <TextView
                             android:id="@+id/portfolioTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                             android:text="Curriculum vitae Maker"
                             android:textColor="@color/black"
                             android:textSize="@dimen/text_size1"
-                            android:textStyle="bold" />
+                            android:textStyle="bold" />-->
 
                     </LinearLayout>
 
