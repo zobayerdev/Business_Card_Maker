@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisitingCardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/infoLl"
+                        android:layout_width="3.2in"
+                        android:layout_height="2in"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp"
+                        tools:ignore="InOrMmUsage">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="65dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_gravity="right"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/nameTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="Md. Zobayer Hasan"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_gravity="right"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/designationTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="Designation"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/companyTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="Founder/CEO"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--Address is here-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_gravity="right"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/officeTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="🏠 Jolpai Restaurant, Mogbazar, \n      Dhaka-1210"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+
+                                    />
+                            </LinearLayout>
+
+                            <!--G-mail Text-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_gravity="right"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/gmailTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="📧 user@gmail.com"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+
+                                    />
+                            </LinearLayout>
+
+                            <!--Telephone-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_gravity="right"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/phoneTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:text="📞 +8801615257555"
+                                    android:textColor="@color/white"
+                                    android:textSize="8sp"
+
+                                    />
+                            </LinearLayout>
+
+
+                            <!--                    &lt;!&ndash;Website&ndash;&gt;
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginStart="215dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:orientation="vertical">
+
+                                                    <TextView
+                                                        android:id="@+id/websiteTv"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginLeft="5dp"
+                                                        android:fontFamily="@font/poppins_semibold"
+                                                        android:text="🌐 www.website.com"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="8sp"
+
+                                                        />
+                                                </LinearLayout>-->
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="save"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

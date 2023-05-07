@@ -58,12 +58,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        cvTv.setOnClickListener(new View.OnClickListener() {
+/*        cvTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Coming soon....!", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
        return view;
     }
