@@ -1,4 +1,4 @@
-# CV_Maker
+# Business Card Maker
 Business card maker application. anyone can make his responsive visiting card using this application. User also share his digital visiting card with anyone. 
 
 ## Application Features
