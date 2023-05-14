@@ -47,8 +47,7 @@ public class MakeVisitingCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_visiting_card);
 
-
-
+        /*init buttons*/
         nameET = findViewById(R.id.nameET);
         companyET = findViewById(R.id.companyET);
         designationET = findViewById(R.id.designationET);
